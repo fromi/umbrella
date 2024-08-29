@@ -9,13 +9,23 @@ import App from './App'
 import { Locators } from './locators/Locators'
 import { Material } from './material/Material'
 import translations from './translations.json'
+import Background from './images/Background.jpg'
 
 setupTranslation(translations, { debug: false })
+
+const theme = {
+  root: {
+    background: {
+      image: Background,
+      overlay: 'rgba(0, 0, 0, 0.3)'
+    }
+  }
+}
 
 ReactDOM.render(
   <StrictMode>
     <GameProvider game="umbrella" Rules={UmbrellaRules} optionsSpec={UmbrellaOptionsSpec} GameSetup={UmbrellaSetup}
-                  material={Material} locators={Locators} animations={new MaterialGameAnimations()}>
+                  material={Material} locators={Locators} animations={new MaterialGameAnimations()} theme={theme}>
       <App/>
     </GameProvider>
   </StrictMode>,
