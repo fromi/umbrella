@@ -1,3 +1,3 @@
-export { GameTemplateRules } from './GameTemplateRules'
-export { GameTemplateOptionsSpec } from './GameTemplateOptions'
-export { GameTemplateSetup } from './GameTemplateSetup'
+export { UmbrellaRules } from './UmbrellaRules'
+export { UmbrellaOptionsSpec } from './UmbrellaOptions'
+export { UmbrellaSetup } from './UmbrellaSetup'
