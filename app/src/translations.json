@@ -1,6 +1,11 @@
 {
   "en": {
     "translation": {
+      "Name": "Umbrella",
+      "Red": "Red",
+      "Green": "Green",
+      "Yellow": "Yellow",
+      "Pink": "Pink",
       "Menu": "Menu",
       "OK": "OK",
       "Validate": "Validate",
@@ -115,6 +120,11 @@
   },
   "fr": {
     "translation": {
+      "Name": "Umbrella",
+      "Red": "Rouge",
+      "Green": "Vert",
+      "Yellow": "Jaune",
+      "Pink": "Rose",
       "Menu": "Menu",
       "OK": "OK",
       "Validate": "Valider",

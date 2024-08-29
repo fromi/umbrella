@@ -31,13 +31,13 @@ export const UmbrellaOptionsSpec: OptionsSpec<UmbrellaOptions> = {
 
 export function getPlayerName(playerId: PlayerColor, t: TFunction) {
   switch (playerId) {
-    case PlayerColor.Red:
-      return t('Red')
-    case PlayerColor.Blue:
-      return t('Blue')
     case PlayerColor.Green:
       return t('Green')
+    case PlayerColor.Red:
+      return t('Red')
     case PlayerColor.Yellow:
       return t('Yellow')
+    case PlayerColor.Pink:
+      return t('Pink')
   }
 }
