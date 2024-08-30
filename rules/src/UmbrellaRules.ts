@@ -13,7 +13,7 @@ import { RuleId } from './rules/RuleId'
 export class UmbrellaRules extends MaterialRules<PlayerColor, MaterialType, LocationType>
   implements TimeLimit<MaterialGame<PlayerColor, MaterialType, LocationType>, MaterialMove<PlayerColor, MaterialType, LocationType>, PlayerColor> {
   rules = {
-    [RuleId.PlayerTurn]: PlayerTurn
+    [RuleId.SlideUmbrella]: PlayerTurn
   }
 
   giveTime(): number {

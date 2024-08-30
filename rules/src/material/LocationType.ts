@@ -9,5 +9,6 @@ export enum LocationType {
   FigureSpace, // Space on a personal board
   ScoreboardSpace, // Space on a personal board
   ScoringTokensStock, // Stock on the table
-  Scoreboard // Scoring spot on a scoreboard
+  Scoreboard, // Scoring spot on a scoreboard
+  FigureTileToPlace // For figure tiles which I can choose the place
 }

@@ -16,6 +16,6 @@ export class UmbrellaSetup extends MaterialGameSetup<PlayerColor, MaterialType, 
   }
 
   start() {
-    this.startPlayerTurn(RuleId.PlayerTurn, this.game.players[0])
+    this.startPlayerTurn(RuleId.SlideUmbrella, this.game.players[0])
   }
 }
