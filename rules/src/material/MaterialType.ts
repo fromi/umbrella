@@ -4,5 +4,6 @@ export enum MaterialType {
   CentralWaitingZone,
   FigureTile,
   Scoreboard,
-  UmbrellaToken
+  UmbrellaToken,
+  ScoringToken
 }
