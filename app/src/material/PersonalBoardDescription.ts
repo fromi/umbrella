@@ -17,7 +17,11 @@ class PersonalBoardDescription extends BoardDescription {
   }
 
   getStaticItems({ rules }: MaterialContext) {
-    return rules.players.map(player => ({ id: player, location: { type: LocationType.PersonalBoardSpot, player } }))
+    return rules.players.map(player => this.getPersonalBoard(player))
+  }
+
+  getPersonalBoard(player: PlayerColor) {
+    return { id: player, location: { type: LocationType.PersonalBoardSpot, player } }
   }
 }
 

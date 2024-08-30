@@ -3,7 +3,9 @@ import { LocationType } from '@gamepark/umbrella/material/LocationType'
 import { MaterialType } from '@gamepark/umbrella/material/MaterialType'
 import { PlayerColor } from '@gamepark/umbrella/PlayerColor'
 import { personalBoardSpotLocator } from './PersonalBoardSpotLocator'
+import { stageLocator } from './StageLocator'
 
 export const Locators: Partial<Record<LocationType, Locator<PlayerColor, MaterialType, LocationType>>> = {
-  [LocationType.PersonalBoardSpot]: personalBoardSpotLocator
+  [LocationType.PersonalBoardSpot]: personalBoardSpotLocator,
+  [LocationType.Stage]: stageLocator
 }

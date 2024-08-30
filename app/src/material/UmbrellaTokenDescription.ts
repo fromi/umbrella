@@ -6,8 +6,9 @@ import RedUmbrella from '../images/tokens/RedUmbrella.jpg'
 import YellowUmbrella from '../images/tokens/YellowUmbrella.jpg'
 
 class UmbrellaTokenDescription extends TokenDescription {
-  width = 2.5
-  height = 2.5
+  width = 2.45
+  height = 2.45
+  borderRadius = 2
   images = {
     [Umbrella.Red]: RedUmbrella,
     [Umbrella.Blue]: BlueUmbrella,
