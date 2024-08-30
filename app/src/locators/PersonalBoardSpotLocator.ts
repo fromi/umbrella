@@ -23,6 +23,23 @@ class PersonalBoardSpotLocator extends Locator {
       return { x: 30, y: 25 }
     }
   }
+
+  getRotateZ(location: Location, context: MaterialContext) {
+    const { rules } = context
+    if (rules.players.length === 4) {
+      switch (getRelativePlayerIndex(context, location.player)) {
+        case 0:
+          return 0
+        case 1:
+          return 90
+        case 2:
+          return 180
+        case 3:
+          return 270
+      }
+    }
+    return 0
+  }
 }
 
 export const personalBoardSpotLocator = new PersonalBoardSpotLocator()
