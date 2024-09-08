@@ -17,6 +17,18 @@ class PersonalBoardSpotLocator extends Locator {
           return { x: 25 }
       }
     }
+
+    if (rules.players.length === 3){
+      switch (getRelativePlayerIndex(context, location.player)) {
+        case 0:
+          return { y: 25 }
+        case 1:
+          return { x: -25, y: -20}
+        case 2:
+          return { x: 25, y: -20 }
+      }
+    }
+
     if (location.player === player) {
       return { y: 25 }
     } else {
@@ -38,7 +50,19 @@ class PersonalBoardSpotLocator extends Locator {
           return 270
       }
     }
-    return 0
+
+    if(rules.players.length === 3){
+      switch (getRelativePlayerIndex(context, location.player)) {
+        case 0:
+          return 0
+        case 1:
+          return 130
+        case 2:
+          return 230
+      }
+    }
+
+    return 0;
   }
 }
 
