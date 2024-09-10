@@ -1,4 +1,4 @@
-import { MaterialGame, MaterialMove, MaterialRules, TimeLimit } from '@gamepark/rules-api'
+import { FillGapStrategy, MaterialGame, MaterialMove, MaterialRules, TimeLimit } from '@gamepark/rules-api'
 import { LocationType } from './material/LocationType'
 import { MaterialType } from './material/MaterialType'
 import { PlayerColor } from './PlayerColor'
@@ -14,6 +14,12 @@ export class UmbrellaRules extends MaterialRules<PlayerColor, MaterialType, Loca
   implements TimeLimit<MaterialGame<PlayerColor, MaterialType, LocationType>, MaterialMove<PlayerColor, MaterialType, LocationType>, PlayerColor> {
   rules = {
     [RuleId.SlideUmbrella]: PlayerTurn
+  }
+
+  locationsStrategies = {
+    [MaterialType.UmbrellaToken]:{
+      [LocationType.CentralWaitingZone]: new FillGapStrategy(),
+    }
   }
 
   giveTime(): number {

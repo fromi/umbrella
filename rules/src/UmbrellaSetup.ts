@@ -14,7 +14,10 @@ export class UmbrellaSetup extends MaterialGameSetup<PlayerColor, MaterialType, 
   Rules = UmbrellaRules
 
   setupMaterial(_options: UmbrellaOptions) {
-    this.setupStagesUmbrellas()
+    this.setupStagesUmbrellas();
+    this.setupPersonalWaitingZoneUmbrellas();
+    this.setupSideWaitingZoneSpotUmbrellas();
+    this.setupCentralWaitingZoneSpotUmbrellas();
   }
 
   setupStagesUmbrellas() {
@@ -24,9 +27,29 @@ export class UmbrellaSetup extends MaterialGameSetup<PlayerColor, MaterialType, 
           this.material(MaterialType.UmbrellaToken).createItem({
             id: stagesSetup[player][y][x],
             location: { type: LocationType.Stage, player, x, y }
-          })
+          });
         }
       }
+    }
+  }
+
+  // Zone d'attente de chaque joueur
+  setupPersonalWaitingZoneUmbrellas(){
+
+  }
+
+  // Zone d'attente entre les joueurs
+  setupSideWaitingZoneSpotUmbrellas(){
+
+  }
+
+  // Zone d'attete centrale
+  setupCentralWaitingZoneSpotUmbrellas(){
+    for(const umbrella of umbrellas){
+      this.material(MaterialType.UmbrellaToken).createItem({
+        id: umbrella,
+        location: { type: LocationType.CentralWaitingZone}
+      });
     }
   }
 
